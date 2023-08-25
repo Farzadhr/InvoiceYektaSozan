@@ -21,7 +21,7 @@
           <div class="detail-seller-blue"></div>
           <div class="detail-seller-text">
             <h3 class=""><i class="bi bi-fire"></i> ذغال ترکیبی</h3>
-            <p>آدرس تولیدی : اندیشه فاز 1 <br />شماره تماس : 09335091414</p>
+            <p>داری مجوز رسمی اتحادیه<br />شماره تماس : 09335091414</p>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
         <div class="col-6 buyer-detail">
           <h4 class="fw-bold mx-2 buyer-lebel">خریدار :</h4>
           <p>
-            <span class="fw-bold" id="buyer-name">فرزاد حیدری</span><span class="px-2 fw-medium" id="phonenumber">09331990212</span><br /><span id="buyer-address">خرازی غرب ، آبشار
+            <span class="fw-bold" id="buyer-name"></span><span class="px-2 fw-medium" id="phonenumber"></span><br /><span id="buyer-address">خرازی غرب ، آبشار
               تهران ، خیابان جدی اردبیلی ، مجتمع اسکان سبز
               ، بلوک کا</span>
           </p>
@@ -43,42 +43,18 @@
           </div>
           <div class="d-flex align-items-center">
             <h5 class="fw-bold">تاریخ فاکتور :</h5>
-            <span class="m-2" id="invoice-number">1402/02/02</span>
+            <span class="m-2" id="invoice-date">1402/02/02</span>
           </div>
         </div>
         <div class="col-12">
           <table class="table table-striped" id="table">
             <tr>
-              <th>کیلو/ مقدار</th>
+              <th>کیلو/ کارتن</th>
               <th style="padding-left: 70px">نام محصول</th>
               <th style="padding-left: 30px">قیمت</th>
               <th style="padding-left: 30px">قیمت کل</th>
             </tr>
-
-            <tr>
-              <td>کیلو/ مقدار</td>
-              <td>نام محصول</td>
-              <td>قیمت</td>
-              <td>قیمت کل</td>
-            </tr>
-            <tr>
-              <td>کیلو/مقدار</td>
-              <td>نام محصول</td>
-              <td>قیمت</td>
-              <td>قیمت کل</td>
-            </tr>
-            <tr>
-              <td>کیلو/مقدار</td>
-              <td>نام محصول</td>
-              <td>قیمت</td>
-              <td>قیمت کل</td>
-            </tr>
-            <tr>
-              <td>کیلو/مقدار</td>
-              <td>نام محصول</td>
-              <td>قیمت</td>
-              <td>قیمت کل</td>
-            </tr>
+            
           </table>
         </div>
         <div class="col-12">
@@ -86,23 +62,17 @@
             <div class="col-7 pe-5">
               <div>
                 <h3>توضیحات :</h3>
-                <span id="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-                  گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
-                  تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبو</span>
+                <span id="description"></span>
               </div>
             </div>
             <div class="col-5 pt-3">
-              <div class="d-flex justify-content-around align-items-center">
-                <h5 class="fw-bold d-inline-block">مقدار کل :</h5>
-                <span id="totalKG">57 کیلو</span>
-              </div>
               <div class="d-flex justify-content-around align-items-center">
                 <h5 class="fw-bold d-inline-block">ارزش افزوده :</h5>
                 <span id="TotalTax">0 تومان</span>
               </div>
               <div class="d-flex justify-content-around align-items-center totalprice">
                 <h5 class="fw-bold d-inline-block">قیمت کل :</h5>
-                <span id="Totalprice">0 تومان</span>
+                <span id="Totalprice"></span>
               </div>
             </div>
           </div>
@@ -111,13 +81,16 @@
     </main>
     <footer>
       <div>
-        <p>با تشکر از خرید شما <br> حداکثر مهلت پرداخت فاکتور 7 روز پس از تاریخ فاکتور میباشید</p>
+        <p>با تشکر از خرید شما <br> آدرس : اندیشه فاز 1</p>
       </div>
 
     </footer>
   </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-<script src="js.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/js.js"></script>
+<script>
+    InitFactor();
+</script>
 </html>
