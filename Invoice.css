@@ -22,8 +22,8 @@ label {
   width: 960px;
   margin: 0 auto;
 }
-header{
-    padding: 0 10px !important;
+header {
+  padding: 0 10px !important;
 }
 .name-seller {
   font-weight: bold;
@@ -64,13 +64,13 @@ main {
   font-size: 18px;
   margin-top: 2px;
 }
-.table{
-    --bs-table-border-color:none;
-    margin-top: 30px;
+.table {
+  --bs-table-border-color: none;
+  margin-top: 30px;
 }
 tr > th {
   background-color: #00c6bb !important;
-  --bs-table-bg-type:#00c6bb !important;
+  --bs-table-bg-type: #00c6bb !important;
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-bg-type: #e9f1f4;
@@ -86,7 +86,7 @@ tr > th {
   border-top: none;
   margin: 0 !important;
 }
-#table tr:first-of-type{
+#table tr:first-of-type {
   border-top: none;
 }
 #table tr td:first-of-type,
@@ -96,15 +96,15 @@ tr > th {
   border-left: 0px #919191 solid;
   border-right: 0px #919191 solid;
 }
-#description{
-    word-wrap: break-word;
+#description {
+  word-wrap: break-word;
 }
-.totalprice{
-    background-color: #00c3bb;
-    padding: 15px;
-    border-radius: 10px;
+.totalprice {
+  background-color: #00c3bb;
+  padding: 15px;
+  border-radius: 10px;
 }
-footer > div{
+footer > div {
   margin-top: 20px;
   background-color: #373b46;
   display: flex;
@@ -113,7 +113,7 @@ footer > div{
   color: white;
   padding: 20px 0;
 }
-footer > div> p{
+footer > div > p {
   text-align: center;
   margin: 0 !important;
 }
