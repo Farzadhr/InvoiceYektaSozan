@@ -1,94 +1,121 @@
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yekta Sozan</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="Invoce.css" />
-  </head>
 
-  <body>
-    <div id="Invoice">
-      <header class="container-fluid">
-        <div class="row">
-          <div class="col-8 name-seller">
-            <h1>یکتاسوزان</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yekta Sozan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="Invoce.css" />
+</head>
+
+<body>
+  <div id="Invoice">
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-8 name-seller">
+          <h1 class="fw-bold">یکتاسوزان</h1>
+        </div>
+        <div class="col-4 dateil-seller">
+          <div class="detail-seller-blue"></div>
+          <div class="detail-seller-text">
+            <h3 class=""><i class="bi bi-fire"></i> ذغال ترکیبی</h3>
+            <p>آدرس تولیدی : اندیشه فاز 1 <br />شماره تماس : 09335091414</p>
           </div>
-          <div class="col-4 dateil-seller">
-            <div class="detail-seller-blue"></div>
-            <div class="detail-seller-text">
-              <h3 class=""><i class="bi bi-fire"></i> ذغال ترکیبی</h3>
-              <p>آدرس تولیدی : اندیشه فاز 1 <br />شماره تماس : 09335091414</p>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-6 buyer-detail">
+          <h4 class="fw-bold mx-2 buyer-lebel">خریدار :</h4>
+          <p>
+            <span class="fw-bold" id="buyer-name">فرزاد حیدری</span><br /><span id="buyer-address">خرازی غرب ، آبشار
+              تهران ، خیابان جدی اردبیلی ، مجتمع اسکان سبز
+              ، بلوک کا</span>
+          </p>
+        </div>
+        <div class="col-6 d-flex flex-column align-items-end justify-content-around">
+          <div class="d-flex align-items-center">
+            <h5 class="fw-bold">شماره فاکتور :</h5>
+            <span class="m-2" id="invoice-number">12345</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <h5 class="fw-bold">تاریخ فاکتور :</h5>
+            <span class="m-2" id="invoice-number">1402/02/02</span>
+          </div>
+        </div>
+        <div class="col-12">
+          <table class="table table-striped" id="table">
+            <tr>
+              <th>کیلو/ مقدار</th>
+              <th style="padding-left: 70px">نام محصول</th>
+              <th style="padding-left: 30px">قیمت</th>
+              <th style="padding-left: 30px">قیمت کل</th>
+            </tr>
+
+            <tr>
+              <td>کیلو/ مقدار</td>
+              <td>نام محصول</td>
+              <td>قیمت</td>
+              <td>قیمت کل</td>
+            </tr>
+            <tr>
+              <td>کیلو/مقدار</td>
+              <td>نام محصول</td>
+              <td>قیمت</td>
+              <td>قیمت کل</td>
+            </tr>
+            <tr>
+              <td>کیلو/مقدار</td>
+              <td>نام محصول</td>
+              <td>قیمت</td>
+              <td>قیمت کل</td>
+            </tr>
+            <tr>
+              <td>کیلو/مقدار</td>
+              <td>نام محصول</td>
+              <td>قیمت</td>
+              <td>قیمت کل</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-12">
+          <div class="row mt-3">
+            <div class="col-7 pe-5">
+              <div>
+                <h3>توضیحات :</h3>
+                <span id="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبو</span>
+              </div>
+            </div>
+            <div class="col-5 pt-3">
+              <div class="d-flex justify-content-around align-items-center">
+                <h5 class="fw-bold d-inline-block">مقدار کل :</h5>
+                <span id="totalKG">57 کیلو</span>
+              </div>
+              <div class="d-flex justify-content-around align-items-center">
+                <h5 class="fw-bold d-inline-block">ارزش افزوده :</h5>
+                <span id="TotalTax">0 تومان</span>
+              </div>
+              <div class="d-flex justify-content-around align-items-center totalprice">
+                <h5 class="fw-bold d-inline-block">ارزش افزوده :</h5>
+                <span id="Totalprice">0 تومان</span>
+              </div>
             </div>
           </div>
         </div>
-      </header>
-      <main class="container-fluid">
-        <div class="row">
-          <div class="col-6 buyer-detail">
-            <h4 class="fw-bold mx-2 buyer-lebel">خریدار :</h4>
-            <p>
-              <span class="fw-bold" id="buyer-name">فرزاد حیدری</span
-              ><br /><span id="buyer-address"
-                >خرازی غرب ، آبشار تهران ، خیابان جدی اردبیلی ، مجتمع اسکان سبز
-                ، بلوک کا</span
-              >
-            </p>
-          </div>
-          <div
-            class="col-6 d-flex flex-column align-items-end justify-content-around"
-          >
-            <div class="d-flex align-items-center">
-              <h5 class="fw-bold">شماره فاکتور :</h5>
-              <span class="m-2" id="invoice-number">12345</span>
-            </div>
-            <div class="d-flex align-items-center">
-              <h5 class="fw-bold">تاریخ فاکتور :</h5>
-              <span class="m-2" id="invoice-number">1402/02/02</span>
-            </div>
-          </div>
-          <div class="col-12">
-            <table class="table table-striped" id="table">
-              <tr>
-                <th>کیلو/ مقدار</th>
-                <th style="padding-left: 70px">نام محصول</th>
-                <th style="padding-left: 30px">قیمت</th>
-                <th style="padding-left: 30px">قیمت کل</th>
-              </tr>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <p>با تشکر از خرید شما <br> حداکثر مهلت پرداخت فاکتور 7 روز پس از تاریخ فاکتور میباشید</p>
+      </div>
+      
+    </footer>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+<script src="js.js"></script>
 
-              <tr>
-                <td>کیلو/ مقدار</td>
-                <td>نام محصول</td>
-                <td>قیمت</td>
-                <td>قیمت کل</td>
-              </tr>
-              <tr>
-                <td>کیلو/مقدار</td>
-                <td>نام محصول</td>
-                <td>قیمت</td>
-                <td>قیمت کل</td>
-              </tr>
-              <tr>
-                <td>کیلو/مقدار</td>
-                <td>نام محصول</td>
-                <td>قیمت</td>
-                <td>قیمت کل</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </main>
-    </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-  <script src="js.js"></script>
 </html>
