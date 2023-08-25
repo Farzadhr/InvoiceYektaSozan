@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Vazir;
+    src: url(font/Vazir-Regular.ttf);
+}
+
+h1,h2,h3,h4,h5,h6,p,i,li,ul,div,input,label{
+    font-family: Vazir;
+}
+#Invoice{
+    width: 1000px;
+    margin: 0 auto;
+}
+.name-seller{
+    font-weight: bold;
+    padding: 40px 60px;
+}
+.dateil-seller{
+    background-color: #373b46;
+    color: white;
+    padding: 0;
+    display: flex;
+}
+.detail-seller-blue{
+    background-color: #00c3bb;
+    width: 20px;
+    height: 100%;
+    margin-right: -20px;
+}
+.detail-seller-text{
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+.detail-seller-text p {
+    padding-top: 5px;
+}
