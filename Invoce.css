@@ -1,36 +1,98 @@
 @font-face {
-    font-family: Vazir;
-    src: url(font/Vazir-Regular.ttf);
+  font-family: Vazir;
+  src: url(font/Vazir-Regular.ttf);
 }
 
-h1,h2,h3,h4,h5,h6,p,i,li,ul,div,input,label{
-    font-family: Vazir;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i,
+li,
+ul,
+div,
+input,
+label {
+  font-family: Vazir;
 }
-#Invoice{
-    width: 1000px;
-    margin: 0 auto;
+#Invoice {
+  width: 1000px;
+  margin: 0 auto;
 }
-.name-seller{
-    font-weight: bold;
-    padding: 40px 60px;
+header{
+    padding: 0 70px !important;
 }
-.dateil-seller{
-    background-color: #373b46;
-    color: white;
-    padding: 0;
-    display: flex;
+.name-seller {
+  font-weight: bold;
+  padding: 40px 0px;
 }
-.detail-seller-blue{
-    background-color: #00c3bb;
-    width: 20px;
-    height: 100%;
-    margin-right: -20px;
+.dateil-seller {
+  background-color: #373b46;
+  color: white;
+  padding: 0;
+  display: flex;
 }
-.detail-seller-text{
-    width: 100%;
-    text-align: center;
-    padding: 10px 20px;
+.detail-seller-blue {
+  background-color: #00c3bb;
+  width: 20px;
+  height: 100%;
+  /* margin-right: -20px; */
+}
+.detail-seller-text {
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
 }
 .detail-seller-text p {
-    padding-top: 5px;
+  padding-top: 5px;
+}
+
+main {
+  padding: 20px 60px !important;
+  margin-top: 40px !important;
+}
+.buyer-lebel {
+  white-space: nowrap;
+}
+.buyer-detail {
+  display: flex;
+}
+.buyer-detail p {
+  font-size: 18px;
+  margin-top: 2px;
+}
+.table{
+    --bs-table-border-color:none;
+    margin-top: 30px;
+}
+tr > th {
+  background-color: #00c6bb !important;
+  --bs-table-bg-type:#00c6bb !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: #e9f1f4;
+}
+#table tr {
+  border-top: 1px #919191 solid;
+}
+#table td,
+#table th {
+  border-left: 1px #919191 solid;
+  border-right: 1px #919191 solid;
+  border-bottom: none;
+  border-top: none;
+  margin: 0 !important;
+}
+#table tr:first-of-type{
+  border-top: none;
+}
+#table tr td:first-of-type,
+#table tr td:last-of-type,
+#table tr th:first-of-type,
+#table tr th:last-of-type {
+  border-left: 0px #919191 solid;
+  border-right: 0px #919191 solid;
 }
