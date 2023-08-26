@@ -15,19 +15,24 @@ li,
 ul,
 div,
 input,
-label {
+label,
+span {
   font-family: Vazir;
 }
-#Invoice {
-  width: 960px;
-  margin: 0 auto;
+body {
+  background-color: black;
 }
-header{
-    padding: 0 10px !important;
+#Invoice {
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+}
+header {
+  padding: 0 10px !important;
 }
 .name-seller {
   font-weight: bold;
-  padding: 40px 0px;
+  padding: 40px 50px;
 }
 .dateil-seller {
   background-color: #373b46;
@@ -51,7 +56,7 @@ header{
 }
 
 main {
-  padding: 20px 0px !important;
+  padding: 20px 50px !important;
   margin-top: 40px !important;
 }
 .buyer-lebel {
@@ -96,16 +101,13 @@ tr > th {
   border-left: 0px #919191 solid;
   border-right: 0px #919191 solid;
 }
-#description {
-  word-wrap: break-word;
-}
 .totalprice {
   background-color: #00c3bb;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
 }
-.totalprice h5{
+.totalprice h5 {
   margin: 0;
 }
 footer > div {

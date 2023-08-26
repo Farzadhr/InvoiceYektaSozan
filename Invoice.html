@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="col-12">
-          <table class="table table-striped" id="table">
+          <table class="table" id="table">
             <tr>
               <th>کیلو/ کارتن</th>
               <th style="padding-left: 70px">نام محصول</th>
@@ -62,7 +62,7 @@
             <div class="col-7 pe-5">
               <div>
                 <h3>توضیحات :</h3>
-                <span id="description"></span>
+                <p id="description" ></p>
               </div>
             </div>
             <div class="col-5 pt-3">
@@ -86,6 +86,13 @@
 
     </footer>
   </div>
+  <div class="d-flex justify-content-around py-5 btn-group col-6 mx-auto">
+    <button class="btn btn-primary mt-4" id="GetFactor">دانلود فاکتور</button>
+    <button class="btn btn-success mt-4" id="EditFactor">ویرایش فاکتور</button>
+    <a class="d-none" id="downloadimglink" href=""></a>
+  </div>
+  <img src="" id="canvasimg" alt="">
+  <!-- <canvas id="can"></canvas> -->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

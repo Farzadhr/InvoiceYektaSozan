@@ -31,30 +31,48 @@ function InitFactor() {
   var encodedData = urlParams.get("data");
   var decodedData = decodeURIComponent(encodedData);
   var objectnew = JSON.parse(decodedData);
-  if(objectnew == null){
-    window.location.href = "InitInvoice.html"
+  if (objectnew == null) {
+    window.location.href = "InitInvoice.html";
   }
   $("#buyer-name").html(objectnew.BuyerName);
   $("#phonenumber").html(objectnew.BuyerPhone);
   $("#buyer-address").html(objectnew.BuyerAddress);
   $("#invoice-number").html(objectnew.FactorId);
   $("#invoice-date").html(objectnew.FactorDate);
-
-  for(var i in objectnew){
-    if(i.indexOf("obj") != -1){
-      var getobj = objectnew[i]
-      var tdtable = ` <tr>
-      <td>${getobj.ProductCount}${getobj.ProductType}</td>
+  $("#description").html(objectnew.Desctiption);
+  for (var i in objectnew) {
+    if (i.indexOf("obj") != -1) {
+      var getobj = objectnew[i];
+      var tdtable = ` <tr style="border-top: 1px #919191 solid;">
+      <td>${getobj.ProductCount} ${getobj.ProductType}</td>
       <td>${getobj.ProductName}</td>
       <td>${getobj.ProductPrice}</td>
       <td>${getobj.ProductTotalPrice}</td>
-    </tr>`
-    document.getElementById("table").innerHTML += tdtable
+    </tr>`;
+      document.getElementById("table").innerHTML += tdtable;
     }
   }
 
-  $("#description").html(objectnew.Desctiption);
-  $("#Totalprice").html(objectnew.TotalPrice + " تومان");
+  $("#EditFactor").click(function (e) {
+    history.back();
+  });
 
-  
+  $("#Totalprice").html(objectnew.TotalPrice + " تومان");
+  var captureDiv = document.getElementById("Invoice");
+  $("#GetFactor").click(function (e) {
+    html2canvas(captureDiv, {
+      allowTaint: true,
+      useCORS: true,
+    }).then(function (canvas) {
+      var downloadLink = document.getElementById("downloadimglink");
+
+      var imgDataUrl = canvas.toDataURL("image/png");
+
+      downloadLink.href = imgDataUrl;
+
+      downloadLink.download = `فاکتور-${objectnew.BuyerName}-${objectnew.FactorId}.png`;
+
+      downloadLink.click();
+    });
+  });
 }
