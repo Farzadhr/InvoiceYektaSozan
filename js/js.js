@@ -57,7 +57,7 @@ function InitFactor() {
     history.back();
   });
 
-  $("#Totalprice").html(objectnew.TotalPrice + " تومان");
+  $("#Totalprice").html(objectnew.TotalPrice + " ریال");
   var captureDiv = document.getElementById("Invoice");
   $("#GetFactor").click(function (e) {
     html2canvas(captureDiv, {
