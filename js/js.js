@@ -54,7 +54,8 @@ function InitFactor() {
   }
 
   $("#EditFactor").click(function (e) {
-    history.back();
+      window.location.href =
+        "InitInvoice.html?data=" + encodeURIComponent(JSON.stringify(objectnew));
   });
 
   $("#Totalprice").html(objectnew.TotalPrice + " ریال");

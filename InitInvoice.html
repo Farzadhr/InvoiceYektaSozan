@@ -61,7 +61,7 @@
                                 <option value="کیلو" selected>کیلو</option>
                                 <option value="کارتن">کارتن</option>
                                 <option value="بسته">بسته</option>
-                                <option value="بسته">باکس</option>
+                                <option value="باکس">باکس</option>
                                 <option value="غیره">غیره</option>
                             </select>
                         </div>
@@ -89,8 +89,7 @@
             <div class="col-12 detail-div my-5">
                 <h3>توضیحات فاکتور</h3>
                 <div class="col-6 mx-auto">
-                    <textarea id="descriptionFactor" class="form-control my-5 border-1 border-dark"
-                        maxlength="200">کارتن ها 6 کیلویی می باشد <br> شماره کارت : 5892101068606124 بانک سپه <br> خانم معصومه بوسلیک
+                    <textarea id="descriptionFactor" class="form-control my-5 border-1 border-dark" maxlength="200">کارتن ها 6 کیلویی می باشد <br> شماره کارت : 5892101068606124 بانک سپه <br> خانم معصومه بوسلیک
                     </textarea>
                 </div>
 
@@ -108,8 +107,8 @@
         format: 'YYYY/MM/DD',
         autoClose: true
     });
-
-    GetEdit();
+    SetDataFromBackURL()
+    // GetEdit();
     checkpriceschange()
     var addbtn = document.getElementById("addproduct")
     addbtn.addEventListener("click", function (e) {
@@ -226,19 +225,78 @@
             $("#Totalypricesfactor").html(splitNumberByThreeDigits(totalnubmer));
         }
     }
-    function GetEdit() {
-        var productdetailclass = document.querySelectorAll(".productdetailclass #ProductPrice")
-        for (var i = 0; i < productdetailclass.length; i++) {
+    // function GetEdit() {
+    //     var productdetailclass = document.querySelectorAll(".productdetailclass #ProductPrice")
+    //     console.log(productdetailclass);
+    //     for (var i = 0; i < productdetailclass.length; i++) {
 
-            var elem = productdetailclass[i]
-            var parentId = elem.parentNode.parentNode.id
-            elem.value = splitNumberByThreeDigits(elem.value)
+    //         var elem = productdetailclass[i]
+    //         var parentId = elem.parentNode.parentNode.id
+    //         elem.value = splitNumberByThreeDigits(elem.value)
 
-            var count = document.querySelector(`#${parentId} #ProductCount`)
-            var totalprice = document.querySelector(`#${parentId} #ProductTotalPrice`)
-            totalprice.value = splitNumberByThreeDigits(String(Number(numberwithoutsplit(elem.value)) * Number(count.value)))
-            GetTotalyPriceFactor()
+    //         var count = document.querySelector(`#${parentId} #ProductCount`)
+    //         var totalprice = document.querySelector(`#${parentId} #ProductTotalPrice`)
+    //         console.log(Number(numberwithoutsplit(elem.value)))
+    //         totalprice.value = splitNumberByThreeDigits(String(Number(numberwithoutsplit(elem.value)) * Number(count.value)))
+    //         GetTotalyPriceFactor()
+    //     }
+    // }
+    function SetDataFromBackURL() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var encodedData = urlParams.get("data");
+        var decodedData = decodeURIComponent(encodedData);
+        var objectnew = JSON.parse(decodedData);
+        console.log(objectnew);
+        if (objectnew == null) {
+            window.location.href = "InitInvoice.html";
+        }else{
+            $("#ProductsCon").html("");
+            $("#BuyerAddress").val(objectnew.BuyerAddress);
+            $("#BuyerName").val(objectnew.BuyerName);
+            $("#BuyerPhone").val(objectnew.BuyerPhone);
+            $("#FactorId").val(objectnew.FactorId);
         }
+        for (var i in objectnew) {
+            if (i.indexOf("obj") != -1) {
+                if(i == "obj2"){
+                    $("#delproduct").removeAttr("disabled");
+                }
+                var getobj = objectnew[i];
+                var productInputs = `
+                    <div class="row col-12 px-5 py-3 productdetailclass" id="Product${i.slice(3)}">
+                        <div class="col-3">
+                            <label for="" class="form-label">نام محصول</label>
+                            <input type="text" id="ProductName" class="form-control border-2" value="${getobj.ProductName}">
+                        </div>
+                        <div class="col-2">
+                            <label for="" class="form-label">نوع محصول</label>
+                            <select id="ProductType" class="form-select">
+                                <option value="کیلو" ${(getobj.ProductType == "کیلو") ? "selected" : ""}>کیلو</option>
+                                <option value="کارتن" ${(getobj.ProductType == "کارتن") ? "selected" : ""}>کارتن</option>
+                                <option value="بسته" ${(getobj.ProductType == "بسته") ? "selected" : ""}>بسته</option>
+                                <option value="باکس" ${(getobj.ProductType == "باکس") ? "selected" : ""}>باکس</option>
+                                <option value="غیره" ${(getobj.ProductType == "غیره") ? "selected" : ""}>غیره</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <label for="" class="form-label">مقدار</label>
+                            <input type="number" value="${getobj.ProductCount}" id="ProductCount" class="form-control border-2">
+                        </div>
+                        <div class="col-3">
+                            <label for="" class="form-label">قیمت</label>
+                            <input type="text" value="${getobj.ProductPrice}" id="ProductPrice" class="form-control border-2">
+                        </div>
+                        <div class="col-2">
+                            <label for="" class="form-label">قیمت کل</label>
+                            <input type="text" value="${getobj.ProductTotalPrice}" id="ProductTotalPrice" disabled class="form-control border-2">
+                        </div>
+                    </div>
+                `
+                console.log(productInputs)
+                $("#ProductsCon").html($("#ProductsCon").html() + productInputs);
+            }
+        }
+        GetTotalyPriceFactor()
     }
 </script>
 <script src="js/js.js"></script>
