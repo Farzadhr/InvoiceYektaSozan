@@ -32,7 +32,6 @@ function InitFactor() {
   var decodedData = decodeURIComponent(encodedData);
   var objectnew = JSON.parse(decodedData);
   if (objectnew == null) {
-    window.location.href = "InitInvoice.html";
   }
   $("#buyer-name").html(objectnew.BuyerName);
   $("#phonenumber").html(objectnew.BuyerPhone);
