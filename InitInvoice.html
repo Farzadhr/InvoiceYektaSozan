@@ -248,7 +248,6 @@
         var objectnew = JSON.parse(decodedData);
         console.log(objectnew);
         if (objectnew == null) {
-            window.location.href = "InitInvoice.html";
         }else{
             $("#ProductsCon").html("");
             $("#BuyerAddress").val(objectnew.BuyerAddress);
